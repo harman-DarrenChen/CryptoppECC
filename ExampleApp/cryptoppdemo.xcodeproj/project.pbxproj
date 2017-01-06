@@ -11,13 +11,16 @@
 		0400349E1C19516100CE26A2 /* CryptoppECDSA.mm in Sources */ = {isa = PBXBuildFile; fileRef = 049806A81C185B3800026DB8 /* CryptoppECDSA.mm */; };
 		0400349F1C19516100CE26A2 /* CryptoppHash.mm in Sources */ = {isa = PBXBuildFile; fileRef = 049806AA1C185B3800026DB8 /* CryptoppHash.mm */; };
 		040034A01C19516100CE26A2 /* Curve.mm in Sources */ = {isa = PBXBuildFile; fileRef = 049806AC1C185B3800026DB8 /* Curve.mm */; };
-		049806B41C18617B00026DB8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 049806B31C18617B00026DB8 /* Images.xcassets */; settings = {ASSET_TAGS = (); }; };
-		049806BC1C1869F000026DB8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 049806BB1C1869F000026DB8 /* main.m */; settings = {ASSET_TAGS = (); }; };
+		049806B41C18617B00026DB8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 049806B31C18617B00026DB8 /* Images.xcassets */; };
+		049806BC1C1869F000026DB8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 049806BB1C1869F000026DB8 /* main.m */; };
 		049806BE1C186B9500026DB8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 049806BD1C186B9500026DB8 /* UIKit.framework */; };
 		049806C01C186BA300026DB8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 049806BF1C186BA300026DB8 /* Foundation.framework */; };
 		049806C21C186BAC00026DB8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 049806C11C186BAC00026DB8 /* CoreGraphics.framework */; };
-		049806C81C186C4100026DB8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 049806C51C186C4100026DB8 /* AppDelegate.m */; settings = {ASSET_TAGS = (); }; };
-		049806C91C186C4100026DB8 /* ViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 049806C71C186C4100026DB8 /* ViewController.mm */; settings = {ASSET_TAGS = (); }; };
+		049806C81C186C4100026DB8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 049806C51C186C4100026DB8 /* AppDelegate.m */; };
+		049806C91C186C4100026DB8 /* ViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 049806C71C186C4100026DB8 /* ViewController.mm */; };
+		B8479D4E1E1F6C98008014BF /* libcryptopp.h in Headers */ = {isa = PBXBuildFile; fileRef = B8479D4C1E1F6C98008014BF /* libcryptopp.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B8479D511E1F6C98008014BF /* libcryptopp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8479D4A1E1F6C98008014BF /* libcryptopp.framework */; };
+		B8479D521E1F6C98008014BF /* libcryptopp.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B8479D4A1E1F6C98008014BF /* libcryptopp.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,7 +31,28 @@
 			remoteGlobalIDString = 3F8E88E41B79DE920028FB2C;
 			remoteInfo = cryptoppdemo;
 		};
+		B8479D4F1E1F6C98008014BF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3F8E88DD1B79DE920028FB2C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B8479D491E1F6C98008014BF;
+			remoteInfo = libcryptopp;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		B8479D561E1F6C98008014BF /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				B8479D521E1F6C98008014BF /* libcryptopp.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		049806191C185B3700026DB8 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
@@ -189,6 +213,9 @@
 		049806C71C186C4100026DB8 /* ViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = ViewController.mm; path = Classes/ViewController.mm; sourceTree = SOURCE_ROOT; };
 		3F8E88E51B79DE920028FB2C /* cryptoppdemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cryptoppdemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F8E88FE1B79DE930028FB2C /* cryptoppdemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = cryptoppdemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B8479D4A1E1F6C98008014BF /* libcryptopp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = libcryptopp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B8479D4C1E1F6C98008014BF /* libcryptopp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = libcryptopp.h; sourceTree = "<group>"; };
+		B8479D4D1E1F6C98008014BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -197,12 +224,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				049806C21C186BAC00026DB8 /* CoreGraphics.framework in Frameworks */,
+				B8479D511E1F6C98008014BF /* libcryptopp.framework in Frameworks */,
 				049806C01C186BA300026DB8 /* Foundation.framework in Frameworks */,
 				049806BE1C186B9500026DB8 /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		3F8E88FB1B79DE930028FB2C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B8479D461E1F6C98008014BF /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -390,6 +425,7 @@
 				049806BD1C186B9500026DB8 /* UIKit.framework */,
 				049806181C185B3700026DB8 /* CryptoppECC */,
 				3F8E88E71B79DE920028FB2C /* cryptoppdemo */,
+				B8479D4B1E1F6C98008014BF /* libcryptopp */,
 				3F8E88E61B79DE920028FB2C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -399,6 +435,7 @@
 			children = (
 				3F8E88E51B79DE920028FB2C /* cryptoppdemo.app */,
 				3F8E88FE1B79DE930028FB2C /* cryptoppdemoTests.xctest */,
+				B8479D4A1E1F6C98008014BF /* libcryptopp.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -425,7 +462,27 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		B8479D4B1E1F6C98008014BF /* libcryptopp */ = {
+			isa = PBXGroup;
+			children = (
+				B8479D4C1E1F6C98008014BF /* libcryptopp.h */,
+				B8479D4D1E1F6C98008014BF /* Info.plist */,
+			);
+			path = libcryptopp;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		B8479D471E1F6C98008014BF /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B8479D4E1E1F6C98008014BF /* libcryptopp.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		3F8E88E41B79DE920028FB2C /* cryptoppdemo */ = {
@@ -435,10 +492,12 @@
 				3F8E88E11B79DE920028FB2C /* Sources */,
 				3F8E88E21B79DE920028FB2C /* Frameworks */,
 				3F8E88E31B79DE920028FB2C /* Resources */,
+				B8479D561E1F6C98008014BF /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				B8479D501E1F6C98008014BF /* PBXTargetDependency */,
 			);
 			name = cryptoppdemo;
 			productName = cryptoppdemo;
@@ -463,6 +522,24 @@
 			productReference = 3F8E88FE1B79DE930028FB2C /* cryptoppdemoTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		B8479D491E1F6C98008014BF /* libcryptopp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B8479D551E1F6C98008014BF /* Build configuration list for PBXNativeTarget "libcryptopp" */;
+			buildPhases = (
+				B8479D451E1F6C98008014BF /* Sources */,
+				B8479D461E1F6C98008014BF /* Frameworks */,
+				B8479D471E1F6C98008014BF /* Headers */,
+				B8479D481E1F6C98008014BF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = libcryptopp;
+			productName = libcryptopp;
+			productReference = B8479D4A1E1F6C98008014BF /* libcryptopp.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -479,6 +556,10 @@
 					3F8E88FD1B79DE930028FB2C = {
 						CreatedOnToolsVersion = 6.4;
 						TestTargetID = 3F8E88E41B79DE920028FB2C;
+					};
+					B8479D491E1F6C98008014BF = {
+						CreatedOnToolsVersion = 8.2;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -497,6 +578,7 @@
 			targets = (
 				3F8E88E41B79DE920028FB2C /* cryptoppdemo */,
 				3F8E88FD1B79DE930028FB2C /* cryptoppdemoTests */,
+				B8479D491E1F6C98008014BF /* libcryptopp */,
 			);
 		};
 /* End PBXProject section */
@@ -511,6 +593,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		3F8E88FC1B79DE930028FB2C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B8479D481E1F6C98008014BF /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -541,6 +630,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B8479D451E1F6C98008014BF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -548,6 +644,11 @@
 			isa = PBXTargetDependency;
 			target = 3F8E88E41B79DE920028FB2C /* cryptoppdemo */;
 			targetProxy = 3F8E88FF1B79DE930028FB2C /* PBXContainerItemProxy */;
+		};
+		B8479D501E1F6C98008014BF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B8479D491E1F6C98008014BF /* libcryptopp */;
+			targetProxy = B8479D4F1E1F6C98008014BF /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -736,6 +837,62 @@
 			};
 			name = Release;
 		};
+		B8479D531E1F6C98008014BF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Sandeep Aggarwal (7S7FS6EYYY)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Sandeep Aggarwal (7S7FS6EYYY)";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = libcryptopp/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = darrenChen.libcryptopp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		B8479D541E1F6C98008014BF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Sandeep Aggarwal (7S7FS6EYYY)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Sandeep Aggarwal (7S7FS6EYYY)";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = libcryptopp/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = darrenChen.libcryptopp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -765,6 +922,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		B8479D551E1F6C98008014BF /* Build configuration list for PBXNativeTarget "libcryptopp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B8479D531E1F6C98008014BF /* Debug */,
+				B8479D541E1F6C98008014BF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
